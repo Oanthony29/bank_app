@@ -1,10 +1,10 @@
 import db from "./dbConnect";
 import Users from "../models/users";
 
-const dbIntialize = async () =>{
+const dbIntialize = async () => {
     try {
         await db.authenticate();
-        Users.sync({alter: true});
+        Users.sync({ alter: false });
         console.log('Connection to database has been established successfully.');
     } catch (error) {
         console.log('unable to connect to databse❌', error)
