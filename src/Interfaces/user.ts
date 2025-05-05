@@ -1,4 +1,4 @@
-import { Optional, Model } from "sequelize"; 
+import { Optional, Model } from "sequelize";
 
 export interface IUser {
     id: string;
@@ -13,6 +13,6 @@ export interface IUser {
     updatedAt: string;
 }
 
-export interface IUserCreationBody extends Optional<IUser, "id" | "createdAt" | "updatedAt" > {}
+export interface IUserCreationBody extends Optional<IUser, "id" | "createdAt" | "updatedAt"> { }
 
-export interface IuserModel extends Model<IUser, IUserCreationBody>, IUser {}
+export interface IUserModel extends Model<IUser, IUserCreationBody>, IUser { }
